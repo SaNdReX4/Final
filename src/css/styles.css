@@ -195,7 +195,6 @@ body {
   font-weight: 700;
   line-height: 120%;
   letter-spacing: 3%;
-  padding-left: 100px;
   margin-bottom: 30px;
 }
 
@@ -214,7 +213,9 @@ body {
   letter-spacing: 3%;
   line-height: 120%;
 }
-
+.front-end-double {
+  display: flex;
+}
 .hero-text .description {
   color: white;
   margin-bottom: 30px;
@@ -231,7 +232,6 @@ body {
 }
 
 .hero-image {
-  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -246,15 +246,19 @@ body {
   overflow: hidden;
   position: relative;
   background-color: var(--bg-dark);
+  display: flex; /* დაამატე ეს */
+  justify-content: center; /* დაამატე ეს */
+  align-items: center; /* დაამატე ეს */
 }
 
 .slider-image {
   position: absolute;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: cover; /* ეს უზრუნველყოფს, რომ ფოტო ჩაჯდეს წრეში ლამაზად */
   opacity: 0;
   transition: opacity 0.5s ease;
+  z-index: 1; /* დაამატე ეს */
 }
 
 .slider-image.active {
@@ -655,7 +659,6 @@ body {
 }
 
 .footer {
-  padding: 60px 0 40px;
   text-align: center;
 }
 
@@ -718,6 +721,8 @@ body {
   letter-spacing: 0.63px;
   line-height: 100%;
   width: 100%;
+  position: absolute;
+  left: 0;
 }
 
 .modal {
