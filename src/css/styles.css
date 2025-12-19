@@ -190,12 +190,23 @@ body {
   letter-spacing: 3%;
 }
 
+.title,
+.dev-span {
+  font-size: clamp(
+    40px,
+    8vw,
+    90px
+  ); /* ეს ავტომატურად შეამცირებს ზომას ეკრანის მიხედვით */
+  font-weight: 700;
+  line-height: 1.1;
+}
+
 .dev-span {
   font-size: 100px;
   font-weight: 700;
   line-height: 120%;
   letter-spacing: 3%;
-  margin-bottom: 30px;
+  margin-left: auto;
 }
 
 .name {
@@ -215,6 +226,7 @@ body {
 }
 .front-end-double {
   display: flex;
+  flex-direction: column;
 }
 .hero-text .description {
   color: white;
@@ -884,6 +896,9 @@ body {
   .title {
     font-size: 40px;
   }
+  .dev-span {
+    font-size: 40px;
+  }
 
   .services-grid {
     grid-template-columns: 1fr;
@@ -930,7 +945,9 @@ body {
   .title {
     font-size: 32px;
   }
-
+  .dev-span {
+    font-size: 32px;
+  }
   .name {
     font-size: 20px;
   }
