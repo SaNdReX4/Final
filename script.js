@@ -72,14 +72,11 @@ document.addEventListener("DOMContentLoaded", function () {
   let testimonialTimer;
 
   function showTestimonial(index) {
-    // ყველა ბარათის და წერტილის აქტიური კლასის მოცილება
     testimonialCards.forEach((card) => card.classList.remove("active"));
     dots.forEach((d) => d.classList.remove("active"));
 
-    // ახალი ინდექსის მინიჭება
     testimonialIndex = index;
 
-    // კონკრეტულის გააქტიურება
     testimonialCards[testimonialIndex].classList.add("active");
     dots[testimonialIndex].classList.add("active");
   }
@@ -92,24 +89,20 @@ document.addEventListener("DOMContentLoaded", function () {
     showTestimonial(testimonialIndex);
   }
 
-  // ავტომატური გადასვლის ფუნქცია (ყოველ 4 წამში)
   function startTestimonialAutoSlide() {
     testimonialTimer = setInterval(nextTestimonial, 4000);
   }
 
-  // წერტილებზე დაჭერის ლოგიკა
   dots.forEach((dot) => {
     dot.addEventListener("click", function () {
       const index = parseInt(this.getAttribute("data-dot"));
 
-      // როცა მომხმარებელი ხელით აჭერს, ტაიმერი რესტარტდება
       clearInterval(testimonialTimer);
       showTestimonial(index);
       startTestimonialAutoSlide();
     });
   });
 
-  // სლაიდერის გაშვება
   startTestimonialAutoSlide();
 
   // სსსსსსს
