@@ -356,25 +356,29 @@ body {
 }
 
 .skill-name {
-  font-size: 14px;
+  font-size: 24px;
   font-weight: 600;
+  line-height: 100%;
+  letter-spacing: 3%;
 }
 
 .progress-bar {
   height: 6px;
   background-color: white;
-  border-radius: 10px;
+  border-radius: 6px;
   overflow: visible;
   position: relative;
+  height: 12px;
 }
 
 .progress {
   height: 100%;
   background-color: #fd6f00;
-  border-radius: 10px;
+  border-radius: 6px;
   width: 0;
   transition: width 1.5s ease;
   position: relative;
+  height: 12px;
 }
 
 .progress::after {
@@ -383,8 +387,8 @@ body {
   right: -8px;
   top: 50%;
   transform: translateY(-50%);
-  width: 16px;
-  height: 16px;
+  width: 25px;
+  height: 25px;
   background-color: var(--text-white);
   border-radius: 50%;
   border: 3px solid #fd6f00;
