@@ -796,9 +796,20 @@ body {
   margin: 0 auto;
   padding: 20px 65px;
 }
+/* გგ */
+
+/* გგ */
 
 .footer {
   text-align: center;
+  position: relative;
+  padding-bottom: 120px;
+}
+
+.footer .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .footer-nav {
@@ -807,6 +818,7 @@ body {
   gap: 35px;
   margin-bottom: 30px;
   flex-wrap: wrap;
+  order: 1;
 }
 
 .footer-nav a {
@@ -828,6 +840,7 @@ body {
   justify-content: center;
   gap: 15px;
   margin-bottom: 35px;
+  order: 2;
 }
 
 .footer-social a {
@@ -851,7 +864,6 @@ body {
 
 .copyright {
   text-align: center;
-  margin-top: 62px;
   background-color: #121212;
   color: #ffffff;
   padding-top: 19px;
@@ -862,6 +874,20 @@ body {
   width: 100%;
   position: absolute;
   left: 0;
+  bottom: 0;
+}
+
+@media (max-width: 768px) {
+  .footer-social {
+    order: 1 !important;
+    margin-top: 20px;
+  }
+
+  .footer-nav {
+    order: 2 !important;
+    flex-direction: column;
+    gap: 15px;
+  }
 }
 
 .modal {
