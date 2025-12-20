@@ -410,6 +410,7 @@ body {
   color: var(--bg-dark);
   max-width: 330px;
   height: 346px;
+  margin: auto;
 }
 
 .service-card:hover {
