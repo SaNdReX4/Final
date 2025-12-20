@@ -192,11 +192,7 @@ body {
 
 .title,
 .dev-span {
-  font-size: clamp(
-    40px,
-    8vw,
-    90px
-  ); /* ეს ავტომატურად შეამცირებს ზომას ეკრანის მიხედვით */
+  font-size: clamp(40px, 8vw, 90px);
   font-weight: 700;
   line-height: 1.1;
 }
@@ -249,6 +245,11 @@ body {
   align-items: center;
   gap: 30px;
 }
+.hero-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 .hero-image .image-wrapper {
   width: 380px;
@@ -258,19 +259,19 @@ body {
   overflow: hidden;
   position: relative;
   background-color: var(--bg-dark);
-  display: flex; /* დაამატე ეს */
-  justify-content: center; /* დაამატე ეს */
-  align-items: center; /* დაამატე ეს */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .slider-image {
   position: absolute;
   width: 100%;
   height: 100%;
-  object-fit: cover; /* ეს უზრუნველყოფს, რომ ფოტო ჩაჯდეს წრეში ლამაზად */
+  object-fit: cover;
   opacity: 0;
   transition: opacity 0.5s ease;
-  z-index: 1; /* დაამატე ეს */
+  z-index: 1;
 }
 
 .slider-image.active {
@@ -361,7 +362,7 @@ body {
 
 .progress-bar {
   height: 6px;
-  background-color: var(--primary-color);
+  background-color: white;
   border-radius: 10px;
   overflow: visible;
   position: relative;
@@ -369,7 +370,7 @@ body {
 
 .progress {
   height: 100%;
-  background-color: var(--primary-color);
+  background-color: #fd6f00;
   border-radius: 10px;
   width: 0;
   transition: width 1.5s ease;
@@ -386,7 +387,7 @@ body {
   height: 16px;
   background-color: var(--text-white);
   border-radius: 50%;
-  border: 3px solid var(--primary-color);
+  border: 3px solid #fd6f00;
   box-shadow: 0 0 0 3px var(--bg-darker);
 }
 
@@ -407,6 +408,8 @@ body {
   text-align: left;
   transition: transform 0.3s ease;
   color: var(--bg-dark);
+  max-width: 330px;
+  height: 346px;
 }
 
 .service-card:hover {
@@ -437,9 +440,11 @@ body {
 }
 
 .service-card p {
-  color: #666;
-  font-size: 13px;
-  line-height: 1.7;
+  color: #000000;
+  font-size: 19px;
+  font-weight: 400;
+  line-height: 100%;
+  letter-spacing: 3%;
 }
 
 .projects {
@@ -459,10 +464,13 @@ body {
   border: 1px solid var(--border-color);
   background: white;
   color: black;
-  border-radius: 10px;
+  border-radius: 12px;
   cursor: pointer;
   transition: all 0.3s ease;
-  font-size: 14px;
+  line-height: 100%;
+  letter-spacing: 3%;
+  font-size: 24px;
+  font-weight: 400;
 }
 
 .filter-btn:hover,
@@ -504,15 +512,20 @@ body {
 }
 
 .project-category {
-  color: var(--primary-color);
-  font-size: 12px;
+  color: #fd6f00;
+  font-size: 19px;
+  font-weight: 400;
+  line-height: 100%;
+  letter-spacing: 3%;
   display: block;
   margin-bottom: 5px;
 }
 
 .project-card h3 {
-  font-size: 16px;
-  font-weight: 500;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 100%;
+  letter-spacing: 3%;
 }
 
 .testimonials {
@@ -560,7 +573,7 @@ body {
 
 .quote-mark {
   font-size: 50px;
-  color: var(--primary-color);
+  color: #fd6f00;
   font-family: Georgia, serif;
   line-height: 0;
   position: absolute;
@@ -576,11 +589,12 @@ body {
 }
 
 .testimonial-text p {
-  font-size: 14px;
-  line-height: 1.9;
+  font-size: 21px;
+  line-height: 100%;
   margin-bottom: 20px;
   padding-left: 15px;
-  color: #333;
+  letter-spacing: 2%;
+  color: #424242;
 }
 
 .testimonial-author {
@@ -588,14 +602,20 @@ body {
 }
 
 .testimonial-author h4 {
-  font-size: 16px;
-  font-weight: 700;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 100%;
+  letter-spacing: 2%;
   margin-bottom: 3px;
+  color: #000000;
 }
 
 .testimonial-author span {
-  font-size: 12px;
-  color: #666;
+  font-size: 19px;
+  font-weight: 400;
+  line-height: 100%;
+  letter-spacing: 2%;
+  color: #000000;
 }
 
 .testimonial-dots {
@@ -606,17 +626,16 @@ body {
 }
 
 .dot {
-  width: 40px;
-  height: 6px;
-  border-radius: 3px;
-  background-color: var(--border-color);
+  width: 56px;
+  height: 16px;
+  border-radius: 8px;
   border: none;
   cursor: pointer;
   transition: all 0.3s ease;
 }
 
 .dot.active {
-  background-color: var(--primary-color);
+  background-color: #fd6f00;
 }
 
 .contact {
@@ -788,6 +807,16 @@ body {
   line-height: 1.6;
 }
 
+.gaertianebuli {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  width: 100%;
+}
+/* project card */
+
 @media (max-width: 992px) {
   .nav {
     display: none;
@@ -829,6 +858,7 @@ body {
   .hero-image {
     align-items: center;
     order: -1;
+    display: none;
   }
 
   .hero-image .image-wrapper {
@@ -836,17 +866,17 @@ body {
     height: 300px;
   }
 
-  .hero-social {
-    justify-content: center;
+  .title {
+    font-size: 48px;
   }
 
-  .title {
+  .dev-span {
     font-size: 48px;
   }
 
   .about-content {
     grid-template-columns: 1fr;
-    text-align: center;
+
     gap: 50px;
   }
 
@@ -886,6 +916,28 @@ body {
   .testimonial-author {
     padding-left: 0;
   }
+
+  .gaertianebuli {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 20px;
+    width: 100%;
+  }
+  .hero-content {
+    gap: 15px;
+  }
+  .hero {
+    min-height: auto !important;
+    padding: 120px 0px 0px;
+  }
+  .section-title.center {
+    text-align: left;
+  }
+  .section-subtitle {
+    text-align: left;
+  }
 }
 
 @media (max-width: 768px) {
@@ -895,9 +947,17 @@ body {
 
   .title {
     font-size: 40px;
+    text-align: left !important;
+    margin-left: 0 !important;
+    padding-left: 0 !important;
   }
   .dev-span {
     font-size: 40px;
+    padding-left: 0 !important;
+    margin-left: 0 !important;
+    text-align: left !important;
+    display: inline-block;
+    width: auto;
   }
 
   .services-grid {
@@ -918,7 +978,10 @@ body {
 
   .filter-btn {
     padding: 8px 18px;
-    font-size: 12px;
+    font-size: 24px;
+    line-height: 100%;
+    letter-spacing: 3%;
+    font-weight: 400;
   }
 
   .testimonial-card {
@@ -928,6 +991,53 @@ body {
   .footer-nav {
     flex-direction: column;
     gap: 15px;
+  }
+
+  .dev-span {
+    padding-left: 0 !important;
+    margin-left: 0 !important;
+
+    display: block;
+    text-align: center;
+    width: 100%;
+  }
+
+  .hero-text {
+    text-align: center;
+    text-align: left !important;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .description {
+    display: none !important;
+  }
+  .first-btn {
+    display: none !important;
+  }
+  .section-title.center {
+    text-align: left;
+  }
+  /* ბუტიონები */
+  .filter-buttons {
+    display: flex;
+    flex-wrap: nowrap !important;
+    justify-content: flex-start !important;
+    overflow-x: auto;
+    padding: 10px 20px;
+    gap: 15px;
+
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+
+  .filter-buttons::-webkit-scrollbar {
+    display: none;
+  }
+
+  .filter-btn {
+    flex: 0 0 auto;
+    white-space: nowrap;
   }
 }
 
