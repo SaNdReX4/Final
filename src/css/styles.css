@@ -415,6 +415,24 @@ body {
   max-width: 330px;
   height: 346px;
   margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 100%;
+  padding-inline: 18px;
+  gap: 20px;
+}
+
+.service-card-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.service-card-img3 {
+  max-width: 47px;
+}
+.service-card-img4 {
+  max-width: 82px;
 }
 
 .service-card:hover {
