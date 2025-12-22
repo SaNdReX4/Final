@@ -282,17 +282,9 @@ body {
 }
 
 .hero-social a {
-  width: 36px;
-  height: 36px;
-  border-radius: 50%;
-  background-color: var(--text-white);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--bg-dark);
-  text-decoration: none;
+  width: 32px;
+  height: 32px;
   transition: all 0.3s ease;
-  font-size: 14px;
 }
 
 .hero-social a:hover {
@@ -858,17 +850,9 @@ body {
 }
 
 .footer-social a {
-  width: 36px;
-  height: 36px;
-  border-radius: 50%;
-  background-color: var(--text-white);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--bg-dark);
-  text-decoration: none;
+  width: 32px;
+  height: 32px;
   transition: all 0.3s ease;
-  font-size: 14px;
 }
 
 .footer-social a:hover {
