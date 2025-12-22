@@ -278,7 +278,7 @@ body {
 
 .hero-social {
   display: flex;
-  gap: 15px;
+  gap: 25px;
 }
 
 .hero-social a {
@@ -809,7 +809,7 @@ body {
 .footer {
   text-align: center;
   position: relative;
-  padding-bottom: 120px;
+  padding-bottom: 77px;
 }
 
 .footer .container {
@@ -822,7 +822,7 @@ body {
   display: flex;
   justify-content: center;
   gap: 35px;
-  margin-bottom: 30px;
+  margin-bottom: 80px;
   flex-wrap: wrap;
   order: 1;
 }
@@ -844,8 +844,8 @@ body {
 .footer-social {
   display: flex;
   justify-content: center;
-  gap: 15px;
-  margin-bottom: 35px;
+  gap: 25px;
+  margin-bottom: 62px;
   order: 2;
 }
 
